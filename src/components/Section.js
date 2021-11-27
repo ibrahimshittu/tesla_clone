@@ -11,7 +11,7 @@ const Section = () => {
             </ItemText>
             <ButtonGroup>
                 <LeftButton>
-                    Custom ORder
+                    Custom Order
                 </LeftButton>
                 <RightButton>
                     Existing Inventory
@@ -44,7 +44,15 @@ const ButtonGroup = styled.div`
 `
 
 const LeftButton = styled.div`
+    background-color: rgba(23, 26, 32, 0.8);
+    height:40px;
+    width:256px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:100px;
 `
 
-const RightButton = styled.div`
+const RightButton = styled(LeftButton)`
 `
