@@ -9,15 +9,18 @@ const Section = () => {
                 <h1>Model S</h1>
                 <p>Order Online for Touchless Delivery</p>
             </ItemText>
-            <ButtonGroup>
-                <LeftButton>
-                    Custom Order
-                </LeftButton>
-                <RightButton>
-                    Existing Inventory
-                </RightButton>
+            <Buttons>
+                <ButtonGroup>
+                    <LeftButton>
+                        Custom Order
+                    </LeftButton>
+                    <RightButton>
+                        Existing Inventory
+                    </RightButton>
 
-            </ButtonGroup>
+                </ButtonGroup>
+                <DownArrow src="/images/down-arrow.svg"/>
+            </Buttons>
         </Wrap>
     )
 }
@@ -31,6 +34,10 @@ const Wrap = styled.div`
     background-repeat:no-repeat:
     background-position: center center;
     background-image:url("/images/model-s.jpg");
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
 `
 
 const ItemText = styled.div`
@@ -40,6 +47,8 @@ const ItemText = styled.div`
 `
 
 const ButtonGroup = styled.div`
+    display:flex;
+    margin-bottom:30px;
 
 `
 
@@ -52,7 +61,17 @@ const LeftButton = styled.div`
     justify-content:center;
     align-items:center;
     border-radius:100px;
+    text-transform:uppercase;
+    font-size:12px;
+    opcaity:0.85;
 `
 
 const RightButton = styled(LeftButton)`
 `
+
+const DownArrow = styled.img`
+    margin-top:20px;
+    height:40px;    
+`
+
+const Buttons = styled.div``
