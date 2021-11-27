@@ -5,8 +5,19 @@ import styled from 'styled-components'
 const Section = () => {
     return (
         <Wrap>
-            <h1>Model S</h1>
-            <p>Order Online for Touchless Delivery</p>
+            <ItemText>
+                <h1>Model S</h1>
+                <p>Order Online for Touchless Delivery</p>
+            </ItemText>
+            <ButtonGroup>
+                <LeftButton>
+                    Custom ORder
+                </LeftButton>
+                <RightButton>
+                    Existing Inventory
+                </RightButton>
+
+            </ButtonGroup>
         </Wrap>
     )
 }
@@ -23,5 +34,17 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.div`
+    padding-top: 15vh;
+    text-align:center;
     
+`
+
+const ButtonGroup = styled.div`
+
+`
+
+const LeftButton = styled.div`
+`
+
+const RightButton = styled.div`
 `
