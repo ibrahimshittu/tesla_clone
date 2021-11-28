@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-const Section = () => {
+const Section = ({title, description}) => {
     return (
         <Wrap>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for Touchless Delivery</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </ItemText>
             <Buttons>
                 <ButtonGroup>
@@ -42,8 +42,7 @@ const Wrap = styled.div`
 
 const ItemText = styled.div`
     padding-top: 15vh;
-    text-align:center;
-    
+    text-align:center; 
 `
 
 const ButtonGroup = styled.div`
@@ -52,7 +51,6 @@ const ButtonGroup = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
     }
-
 `
 
 const LeftButton = styled.div`
@@ -74,7 +72,6 @@ const LeftButton = styled.div`
 const RightButton = styled(LeftButton)`
     background-color: white;
     color:black;
-
 `
 
 const DownArrow = styled.img`
