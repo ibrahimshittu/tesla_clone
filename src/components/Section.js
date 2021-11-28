@@ -31,7 +31,7 @@ const Wrap = styled.div`
     width:100vw;
     height:100vh;
     background-size: cover;
-    background-repeat:no-repeat:
+    background-repeat: no-repeat:
     background-position: center center;
     background-image:url("/images/model-s.jpg");
     display:flex;
@@ -49,6 +49,9 @@ const ItemText = styled.div`
 const ButtonGroup = styled.div`
     display:flex;
     margin-bottom:30px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
 `
 
@@ -63,15 +66,22 @@ const LeftButton = styled.div`
     border-radius:100px;
     text-transform:uppercase;
     font-size:12px;
-    opcaity:0.85;
+    opacity:0.85;
+    margin:8px;
+    cursor:pointer;
 `
 
 const RightButton = styled(LeftButton)`
+    background-color: white;
+    color:black;
+
 `
 
 const DownArrow = styled.img`
-    margin-top:20px;
-    height:40px;    
+    height:40px; 
+    animation:animateDown infinite 1.5s;
+    cursor: pointer;
 `
 
-const Buttons = styled.div``
+const Buttons = styled.div`
+`
