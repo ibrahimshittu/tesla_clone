@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Gotham Medium", sans-serif,-apple-system, BlinkMacSystemFont;
   color: #393c41;
   margin: 0;
   padding: 0;
@@ -9,6 +9,12 @@
 body {
   overflow-x:hidden;
   width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  padding:4px 0px;
+
 }
 
 @keyframes animateDown {

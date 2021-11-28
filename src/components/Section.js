@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-const Section = ({title, description}) => {
+const Section = ({title, description, backgroundImg, leftButtonText, rightButtonText, showArrow }) => {
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg} >
             <ItemText>
                 <h1>{title}</h1>
                 <p>{description}</p>
@@ -12,14 +12,15 @@ const Section = ({title, description}) => {
             <Buttons>
                 <ButtonGroup>
                     <LeftButton>
-                        Custom Order
+                        {leftButtonText}
                     </LeftButton>
+                    { rightButtonText && 
                     <RightButton>
-                        Existing Inventory
-                    </RightButton>
+                        {rightButtonText}
+                    </RightButton> }
 
                 </ButtonGroup>
-                <DownArrow src="/images/down-arrow.svg"/>
+                {showArrow && <DownArrow src="/images/down-arrow.svg"/> }
             </Buttons>
         </Wrap>
     )
@@ -30,10 +31,10 @@ export default Section
 const Wrap = styled.div`
     width:100vw;
     height:100vh;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat:
-    background-position: center center;
-    background-image:url("/images/model-s.jpg");
+    background-position: center;
+    background-image:${props => `url("/images/${props.bgImage}");`}
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -41,7 +42,7 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.div`
-    padding-top: 15vh;
+    padding-top: 10vh;
     text-align:center; 
 `
 
