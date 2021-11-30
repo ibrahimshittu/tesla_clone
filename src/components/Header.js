@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import MenuIcon from '@material-ui/icons/Menu'
+
 //import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -19,6 +21,7 @@ const Header = () => {
                 <RightMenu>
                     <a href="#">Shop</a>
                     <a href="#">Tesla Account</a>
+                    <CustomMenu/>
 
                 </RightMenu>
             
@@ -36,6 +39,7 @@ const Container = styled.div`
     min-height:60px;
     display:flex;
     align-items:center;
+    justify-content:space-between;
     padding:0 20px;
     position:fixed;
     hrefp:0;
@@ -57,15 +61,25 @@ const Menu = styled.div`
         flex-wrap: nowrap;
 
     }
+
+    @media (max-width: 768px) {
+        display:none;
+    }
 `
 
 const RightMenu = styled.div`
+    display:flex;
+    align-items:center;
    
     a {
-        margin:0 10px;
+        margin:10px;
         text-transform:uppercase;
         font-weight:600;
         
 
     }
+`
+
+const CustomMenu = styled(MenuIcon)`
+    cursor:pointer;
 `
