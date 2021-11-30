@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import MenuIcon from '@material-ui/icons/Menu'
+//import MenuIcon from '@material-ui/icons/Menu'
 
 //import { Link } from "react-router-dom";
 
@@ -17,11 +17,14 @@ const Header = () => {
                     <a href="#">Model 3</a>
                     <a href="#">Model X</a>
                     <a href="#">Model Y</a>
+                    <a href="#">Solar Roof</a>
+                    <a href="#">Solar Panels</a>
                 </Menu>
                 <RightMenu>
                     <a href="#">Shop</a>
-                    <a href="#">Tesla Account</a>
-                    <CustomMenu/>
+                    <a href="#">Account</a>
+                    <a href="#">Menu</a>
+                    {/* <CustomMenu/> */}
 
                 </RightMenu>
             
@@ -55,8 +58,7 @@ const Menu = styled.div`
     justify-content:center;
     flex:1;
     a {
-        margin:0 10px;
-        text-transform:uppercase;
+        margin:0 15px;
         font-weight:600;
         flex-wrap: nowrap;
 
@@ -73,13 +75,12 @@ const RightMenu = styled.div`
    
     a {
         margin:10px;
-        text-transform:uppercase;
         font-weight:600;
         
 
     }
 `
 
-const CustomMenu = styled(MenuIcon)`
-    cursor:pointer;
-`
+// const CustomMenu = styled(MenuIcon)`
+//     cursor:pointer;
+// `
